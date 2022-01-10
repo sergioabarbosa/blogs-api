@@ -1,5 +1,6 @@
 const express = require('express');
 const root = require('./controllers/root');
+const error = require('./middlewares/erro');
 
 const app = express();
 app.use(express.json());
@@ -10,5 +11,7 @@ app.get('/', (request, response) => {
 });
 
 app.use('/', root);
+
+app.use(error);
 
 app.listen(3000, () => console.log('ouvindo porta 3000!'));

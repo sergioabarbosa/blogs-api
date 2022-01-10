@@ -14,13 +14,17 @@ const newToken = (data) => {
 };
 
 const validToken = (token) => {
+  let verifyToken;
+  if (!token) return { code: 401, message: 'Token not found' };
   try {
-    const { data } = jwt.verify(token, secret);
-
-    return data;
+    verifyToken = jwt.verify(token, secret);
   } catch (err) {
-    console.error(err.message);
+    return { code: 401, message: 'Expired or invalid token' };
   }
+  
+  const dataToken = verifyToken.data;
+  
+  return dataToken;
 };
 
 module.exports = {
