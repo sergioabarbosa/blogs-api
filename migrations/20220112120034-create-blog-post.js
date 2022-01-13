@@ -24,12 +24,12 @@ module.exports = {
         },
         type: Sequelize.INTEGER
       },
-      createdAt: {
+      published: {
         allowNull: false,
         field: 'published', 
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated: {
         allowNull: false,
         field: 'updated', 
         type: Sequelize.DATE
