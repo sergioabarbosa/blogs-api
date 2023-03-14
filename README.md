@@ -1,3 +1,4 @@
+#SEJA BEM-VINDO AO PROJETO BLOGS-API!
 - [Requisitos do projeto](#requisitos-do-projeto)
    - [Lista de Requisitos](#lista-de-requisitos)
     - [1 - Sua aplicação deve ter o endpoint POST `/user`](#1---sua-aplicação-deve-ter-o-endpoint-post-user)
